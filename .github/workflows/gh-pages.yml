@@ -6,7 +6,7 @@ on:
     - main
 
 jobs:
-  build:
+  installation:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -19,9 +19,9 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
-    - name: Run tests
+      
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Testing
       run: npm run test:headless
-
-    - name: Build
-      run: npm run build
